@@ -83,6 +83,9 @@ let g:indentLine_char = '|'
 let g:indentLine_color_term = 209
 let g:indentLine_leadingSpaceEnabled = 1
 
+"YouCompleteMe
+set completeopt-=preview
+
 "Remap
 noremap <C-n> :NERDTreeToggle<CR>
 nnoremap <Tab> :bnext<CR>
