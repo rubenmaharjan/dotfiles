@@ -20,7 +20,7 @@ set hls
 set path+=**
 set wildmenu
 syntax on
-colorscheme codedark
+colorscheme onedark
 set relativenumber
 set cursorline 
 set incsearch
@@ -46,7 +46,7 @@ let g:EclimBrowser = 'firefox'
 "Airline
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
-let g:airline_theme='codedark'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 let g:airline_skip_empty_sections = 1
 "let g:airline#extensions#bufferline#enabled = 1
@@ -75,11 +75,17 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
 
 "Indent Line
 let g:indentLine_setColors = 1
 let g:indentLine_char = '|'
 let g:indentLine_color_term = 209
 let g:indentLine_leadingSpaceEnabled = 1
+
+"Remap
+noremap <C-n> :NERDTreeToggle<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 
