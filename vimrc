@@ -25,8 +25,9 @@ set relativenumber
 set cursorline 
 set incsearch
 set autochdir
-set tabstop=2
-set shiftwidth=2 
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
 
 
@@ -44,7 +45,7 @@ let g:EclimCompletionMethod = 'omnifunc'
 let g:EclimBrowser = 'firefox'
 
 "Airline
-let g:airline_left_sep = '▶'
+let g:airline_left_sep = '▶' 
 let g:airline_right_sep = '◀'
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
@@ -91,4 +92,5 @@ noremap <C-n> :NERDTreeToggle<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
-
+set list
+set listchars=tab:›\ ,eol:¬,trail:⋅
