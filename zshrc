@@ -111,3 +111,5 @@ export PATH=/home/ruben/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source virtualenvwrapper.sh
+
+#eval "$(starship init zsh)"
