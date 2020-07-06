@@ -8,7 +8,8 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+export TYPEWRITTEN_CURSOR="block"
+ZSH_THEME="typewritten"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -63,8 +64,8 @@ ZSH_THEME="bira"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -81,6 +82,38 @@ source $ZSH/oh-my-zsh.sh
 #fi
 
 export EDITOR='vim'
+
+#vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Change cursor shape for different vi modes.
+#function zle-keymap-select {
+#  if [[ ${KEYMAP} == vicmd ]] ||
+#     [[ $1 = 'block' ]]; then
+#    echo -ne '\e[1 q'
+#  elif [[ ${KEYMAP} == main ]] ||
+#       [[ ${KEYMAP} == viins ]] ||
+#       [[ ${KEYMAP} = '' ]] ||
+#       [[ $1 = 'beam' ]]; then
+#    echo -ne '\e[5 q'
+#  fi
+#}
+#zle -N zle-keymap-select
+#zle-line-init() {
+#    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+#    echo -ne "\e[5 q"
+#}
+#zle -N zle-line-init
+#echo -ne '\e[5 q' # Use beam shape cursor on startup.
+##precmd() { echo -ne '\e[5 q' ;} 
+## Use beam shape cursor for each new prompt.
+#_fix_cursor() {
+#   echo -ne '\e[5 q'
+#}
+#
+#precmd_functions+=(_fix_cursor)
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -96,11 +129,14 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
  alias cdtms="cd /home/ruben/work/development/gitted/tms"
+ alias cdpt="cd /home/ruben/work/pt"
+ alias cdrob="cd /home/ruben/work/Robling/"
  alias one="cd .."
  alias two="cd ../.."
  alias three="cd ../../.."
  alias four="cd ../../../.."
  alias five="cd ../../../../.."
+ alias gst="git status"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -113,3 +149,19 @@ export PROJECT_HOME=$HOME/Devel
 source virtualenvwrapper.sh
 
 #eval "$(starship init zsh)"
+
+export ANDROID_HOME=/opt/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.yarn/bin
+
+export PATH=$PATH:/home/ruben/.vim/bundle/fzf/bin
+#export PATH=$PATH:/home/ruben/.vim/bundle/vim-live-latex-preview/bin
+
+#ruby
+export PATH=$PATH:/home/ruben/.rbenv/versions/2.7.0/bin
+
+
+source $ZSH/oh-my-zsh.sh
