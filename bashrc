@@ -144,3 +144,10 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=/home/ruben/bin:$PATH
+
+#check if hdmi is connected and run the dual setup.
+./.screenlayout/dualScreen.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

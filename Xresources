@@ -101,7 +101,7 @@ URxvt*saveLines:                  5000
 ! for 'fake' transparency (without Compton) uncomment the following three lines
  URxvt*inheritPixmap:            true
  URxvt*transparent:              true
- URxvt*shading:                  50
+ URxvt*shading:                  20
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
@@ -133,7 +133,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*scrollBar_floating:         true
 ! URxvt*scrollBar_align:            mode
 ! URxvt*thickness:                  number
-! URxvt*scrollTtyOutput:            boolean
+URxvt*scrollTtyOutput:            false
 ! URxvt*scrollTtyKeypress:          boolean
 ! URxvt*scrollWithBuffer:           boolean
 ! URxvt*tintColor:                  !7DA55
