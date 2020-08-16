@@ -149,3 +149,5 @@ export PATH=/home/ruben/bin:$PATH
 
 #check if hdmi is connected and run the dual setup.
 ./.screenlayout/dualScreen.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

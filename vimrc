@@ -31,6 +31,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+"Setting swp directory
+set directory^=$HOME/.vim/tmp//
 
 
 "Making Arrow keys useless
@@ -39,6 +41,28 @@ noremap <Down> ddp
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+"Remap
+noremap <C-n> :NERDTreeToggle<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+nnoremap <C-p> :<C-u>FZF<CR>
+imap jj <Esc>
+
+"Leader Mappings
+nnoremap <Leader>q" ciw""<Esc>P
+nnoremap <Leader>q' ciw''<Esc>P
+nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+nnoremap <leader>s :SyntasticToggleMode<CR>
+nnoremap <leader>c :bufdo bd<CR>
+"yanking/pasting to clipborad/primary
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+"" Leader Fuzzy
+nnoremap <leader>f :Files <CR>
+nnoremap <leader>b :Buffers <CR>
+nnoremap <leader>a :Ag <CR>
 
 let g:pymode_python = 'python3'
 
@@ -130,12 +154,6 @@ let g:indentLine_leadingSpaceEnabled = 1
 "YouCompleteMe
 set completeopt-=preview
 
-"Remap
-noremap <C-n> :NERDTreeToggle<CR>
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
-nnoremap <C-p> :<C-u>FZF<CR>
-
 set list
 set listchars=tab:›\ ,eol:¬,trail:⋅
 set tags=./tags,tags;
@@ -167,21 +185,6 @@ inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
-"Leader Mappings
-nnoremap <Leader>q" ciw""<Esc>P
-nnoremap <Leader>q' ciw''<Esc>P
-nnoremap <Leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
-nnoremap <leader>s :SyntasticToggleMode<CR>
-nnoremap <leader>c :bufdo bd<CR>
-"yanking/pasting to clipborad/primary
-noremap <Leader>y "*y
-noremap <Leader>p "*p
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
-"" Leader Fuzzy
-nnoremap <leader>f :Files <CR>
-nnoremap <leader>b :Buffers <CR>
-nnoremap <leader>a :Ag <CR>
 
 
 "Latex

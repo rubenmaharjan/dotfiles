@@ -165,3 +165,5 @@ export PATH=$PATH:/home/ruben/.rbenv/versions/2.7.0/bin
 
 
 source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
